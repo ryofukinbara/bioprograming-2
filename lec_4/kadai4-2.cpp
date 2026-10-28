@@ -8,13 +8,15 @@ int main(void){
 
     int hist[256] = {0};
     int total = gray_image.w * gray_image.h;
-    int total_sum = 0;
+    int sum = 0;
 
     for(int y=0; y<gray_image.h; y++){
         for(int x=0; x<gray_image.w; x++){
             int v=gray_image.GetPixel(y, x, 0);
             hist[v]++;
-            total_sum += v; 
+            sum += v; 
         }
     }
+    double m = sum / total;
+
 }
